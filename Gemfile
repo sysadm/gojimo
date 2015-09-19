@@ -5,9 +5,10 @@ gem 'pg'
 gem 'bootstrap-sass', '~> 3.3.1'
 gem 'sass-rails', '~> 5.0'
 gem 'autoprefixer-rails'
+gem 'slim'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
-gem 'therubyracer', platforms: :ruby
+gem 'therubyracer'
 gem 'jquery-rails'
 
 # Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
@@ -20,4 +21,5 @@ end
 
 group :development do
   gem 'spring'
+  gem 'bootstrap-generators', '~> 3.3.4'
 end

@@ -1,0 +1,29 @@
+nav.navbar.navbar-default.navbar-fixed-top[role="navigation"]
+  .container-fluid
+    .navbar-header
+      button.navbar-toggle.collapsed[type="button" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"]
+        span.sr-only
+          =t(:menu)
+        span.icon-bar
+        span.icon-bar
+        span.icon-bar
+      =link_to 'Gojimo', root_path, class: 'navbar-brand'
+    #bs-example-navbar-collapse-1.collapse.navbar-collapse
+      ul.nav.navbar-nav
+        li
+          =link_to t(:exams), :exams
+        li.dropdown
+          a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-expanded="false"]
+            =t(:qualifications)
+            span.caret
+          ul.dropdown-menu[role="menu"]
+            li
+              a[href="#"]
+                | Index
+            li.divider
+            li
+              a[href="#"]
+                | Force update
+        li
+          a[href="#"]
+            | Subjects
