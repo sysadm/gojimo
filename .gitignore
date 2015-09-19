@@ -1,0 +1,12 @@
+.DS_Store
+/.bundle
+/.idea
+/doc
+/log/*
+!/log/.keep
+/tmp
+config/database.yml
+config/secrets.yml
+public/assets
+REVISION
+assets_manifest.yml
