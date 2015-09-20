@@ -1,5 +1,10 @@
 Rails.application.routes.draw do
 
+  get 'get-all', to: 'exams#get_all', as: :getall
+  post 'remove-all', to: 'exams#remove_all', as: :removeall
+  resources :countries
+  resources :subjects
+  resources :qualifications
   resource :exams, only: [:index]
   get 'exams(/*other)', to: 'exams#index', as: :exams
   root 'exams#index'

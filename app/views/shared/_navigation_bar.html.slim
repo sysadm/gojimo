@@ -10,20 +10,21 @@ nav.navbar.navbar-default.navbar-fixed-top[role="navigation"]
       =link_to 'Gojimo', root_path, class: 'navbar-brand'
     #bs-example-navbar-collapse-1.collapse.navbar-collapse
       ul.nav.navbar-nav
-        li
-          =link_to t(:exams), :exams
         li.dropdown
           a.dropdown-toggle[href="#" data-toggle="dropdown" role="button" aria-expanded="false"]
-            =t(:qualifications)
+            =t(:exams)
             span.caret
           ul.dropdown-menu[role="menu"]
             li
-              a[href="#"]
-                | Index
+              =link_to t(:index), :exams
             li.divider
             li
-              a[href="#"]
-                | Force update
+              =link_to t(:get_all_data_from_api_server), :getall
+            li
+              =link_to t(:remove_all_data), :removeall, method: :post
         li
-          a[href="#"]
-            | Subjects
+          =link_to t(:qualifications), :qualifications
+        li
+          =link_to t(:subjects), subjects_path
+        li
+          =link_to t(:countries), countries_path

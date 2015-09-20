@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  system_id: MyString
+  title: MyString
+  link: MyString
+  icon: MyString
+  colour: MyString
+  qualification_id: 1
+
+two:
+  system_id: MyString
+  title: MyString
+  link: MyString
+  icon: MyString
+  colour: MyString
+  qualification_id: 1

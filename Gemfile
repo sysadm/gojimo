@@ -6,6 +6,7 @@ gem 'bootstrap-sass', '~> 3.3.1'
 gem 'sass-rails', '~> 5.0'
 gem 'autoprefixer-rails'
 gem 'slim'
+gem 'slim-rails'
 gem 'uglifier', '>= 1.3.0'
 gem 'coffee-rails', '~> 4.1.0'
 gem 'therubyracer'
@@ -21,5 +22,5 @@ end
 
 group :development do
   gem 'spring'
-  gem 'bootstrap-generators', '~> 3.3.4'
+  gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
 end

@@ -5,25 +5,13 @@ h4.center
 br
 .row
   .col-md-4
-    .list-group
-      a href="#" class = "list-group-item active"
+    ul.list-group
+      li.list-group-item.active
         |Qualifications
-      a href="#" class="list-group-item"
-        |Coś tam
-      a href="#" class="list-group-item"
-        |Coś tam2
-      a href="#" class="list-group-item"
-        |Coś tam3
-      a href="#" class="list-group-item"
-        |Coś tam
-      a href="#" class="list-group-item"
-        |Coś tam2
-      a href="#" class="list-group-item"
-        |Coś tam3
-      a href="#" class="list-group-item"
-        |Coś tam
-      a href="#" class="list-group-item"
-        |Coś tam3
+      - @qualifications.each do |qualification|
+        li.list-group-item
+          span.badge=qualification.subjects_count
+          =link_to qualification.name, qualification_path(qualification)
   .col-md-4
     .list-group
       a href="#" class = "list-group-item active"
@@ -35,12 +23,12 @@ br
       a href="#" class="list-group-item"
         |Coś tam3
   .col-md-4
-    .list-group
-      a href="#" class = "list-group-item active"
+    ul.list-group
+      li.list-group-item.active
         |Exams
-      a href="#" class="list-group-item"
+      li.list-group-item
         |Some product 1
-      a href="#" class="list-group-item"
+      li.list-group-item
         |Some product 2
-      a href="#" class="list-group-item"
-        |Some product 3
+      li.list-group-item
+        |Some product 33
