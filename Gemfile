@@ -24,4 +24,9 @@ end
 group :development do
   gem 'spring'
   gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+  gem 'capistrano', '~> 3.0', require: false
+  gem 'capistrano-rails', '~> 1.1', require: false
+  gem 'capistrano-bundler', '~> 1.1', require: false
+  gem 'capistrano-rvm', '~> 0.1', require: false
+  gem 'capistrano3-unicorn'
 end
