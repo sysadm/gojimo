@@ -10,7 +10,7 @@ set :format, :pretty
 # Default value for :log_level is :debug
 set :log_level, :info
 set :tests, []
-set :linked_files, %w(config/database.yml config/config.yml)
+set :linked_files, %w(config/database.yml config/secrets.yml)
 set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets public/assets)
 
 # set :default_env, { path: "/opt/ruby/bin:$PATH" }
@@ -18,7 +18,6 @@ set :linked_dirs, %w(log tmp/pids tmp/cache tmp/sockets public/assets)
 set :keep_releases, 5
 
 after 'deploy:publishing', 'deploy:restart'
-after 'deploy:finishing', 'spec:check_links'
 
 namespace :deploy do
   task :restart do
