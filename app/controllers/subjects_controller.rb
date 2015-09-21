@@ -1,5 +1,5 @@
 class SubjectsController < ApplicationController
-  before_action :set_subject, only: [:show, :edit, :update, :destroy]
+  before_action :set_subject, only: [:show, :edit, :update, :destroy, :get_products_list]
 
   # GET /subjects
   # GET /subjects.json
@@ -61,6 +61,11 @@ class SubjectsController < ApplicationController
     end
   end
 
+  # I just have no information about products/exams, so I take it randomly.
+  def get_products_list
+    @products = Array.new(rand(2..12), t(:some_product))
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_subject
@@ -69,6 +74,6 @@ class SubjectsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def subject_params
-      params.require(:subject).permit(:system_id, :title, :link, :icon, :colour, :qualification_id)
+      params.require(:subject).permit(:system_id, :title, :link, :icon, :colour)
     end
 end

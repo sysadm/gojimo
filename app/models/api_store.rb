@@ -72,13 +72,13 @@ class ApiStore < ActiveRecord::Base
           qualification.update_attributes(
               name: q['name'],
               link: q['link'],
-              country_id: country_id,
-              subjects_count: q['subjects'].count
+              country_id: country_id
           )
           if q['subjects'].count > 0
             q['subjects'].each do |s|
               qualification.subjects << Subject.find_by(system_id: s['id'])
             end
+            qualification.update_attribute(:subjects_count, qualification.subjects.count)
           end
         end
       end

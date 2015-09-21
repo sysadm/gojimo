@@ -6,7 +6,6 @@ class CreateSubjects < ActiveRecord::Migration
       t.string :link
       t.string :icon
       t.string :colour
-      t.integer :qualification_id
 
       t.timestamps null: false
     end

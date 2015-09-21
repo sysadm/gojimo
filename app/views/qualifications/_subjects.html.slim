@@ -1,0 +1,8 @@
+ul.list-group
+  li.list-group-item.active
+    |Subjects
+  - @subjects.each do |subject|
+    li.list-group-item
+      i.fa.fa-certificate style="color: #{star_color(subject.colour)};"
+      |&nbsp;&nbsp;
+      =link_to subject.name, get_products_list_path(subject), remote: true, class: "subject_link"

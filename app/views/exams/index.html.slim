@@ -11,24 +11,16 @@ br
       - @qualifications.each do |qualification|
         li.list-group-item
           span.badge=qualification.subjects_count
-          =link_to qualification.name, qualification_path(qualification)
+          =link_to qualification.name, get_subjects_list_path(qualification), remote: true, class: "qualification_link"
   .col-md-4
-    .list-group
-      a href="#" class = "list-group-item active"
-        |Subjects
-      a href="#" class="list-group-item"
-        |Coś tam
-      a href="#" class="list-group-item"
-        |Coś tam2
-      a href="#" class="list-group-item"
-        |Coś tam3
+    #subjects_list
   .col-md-4
-    ul.list-group
-      li.list-group-item.active
-        |Exams
-      li.list-group-item
-        |Some product 1
-      li.list-group-item
-        |Some product 2
-      li.list-group-item
-        |Some product 33
+    #products_list
+
+javascript:
+  $(document).ready(function() {
+    $(".qualification_link").click(function () {
+      $("#subjects_list").hide();
+      $("#products_list").hide();
+    });
+  });

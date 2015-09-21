@@ -22,10 +22,6 @@ p
   strong= model_class.human_attribute_name(:colour) + ':'
   br
   = @subject.colour
-p
-  strong= model_class.human_attribute_name(:qualification_id) + ':'
-  br
-  = @subject.qualification_id
 
 = link_to t('.back', :default => t("helpers.links.back")), subjects_path, :class => 'btn btn-default'
 '

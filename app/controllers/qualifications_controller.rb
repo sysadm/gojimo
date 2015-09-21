@@ -1,5 +1,5 @@
 class QualificationsController < ApplicationController
-  before_action :set_qualification, only: [:show, :edit, :update, :destroy]
+  before_action :set_qualification, only: [:show, :edit, :update, :destroy, :get_subjects_list]
 
   # GET /qualifications
   # GET /qualifications.json
@@ -59,6 +59,10 @@ class QualificationsController < ApplicationController
       format.html { redirect_to qualifications_url, notice: 'Qualification was successfully destroyed.' }
       format.json { head :no_content }
     end
+  end
+
+  def get_subjects_list
+    @subjects = @qualification.subjects.order(:name)
   end
 
   private

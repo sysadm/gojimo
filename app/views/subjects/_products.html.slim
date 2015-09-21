@@ -1,0 +1,6 @@
+ul.list-group
+  li.list-group-item.active
+    |Exams
+  - @products.each_with_index do |product, idx|
+    li.list-group-item
+      |#{product} #{idx}

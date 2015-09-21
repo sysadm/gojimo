@@ -1,4 +1,5 @@
 class Subject < ActiveRecord::Base
-  belongs_to :qualification
+  has_many :qualifications, through: :scientific_sets
+  has_many :scientific_sets
 
 end
